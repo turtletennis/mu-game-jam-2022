@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{EBE0EB9D-02DE-4275-9550-70ADACD8EBA2}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{EBE0EB9D-02DE-4275-9550-70ADACD8EBA2}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Music" ID="{4883BEC8-B2F6-47D1-8484-373FCE696B99}" ShortID="452073127">
+					<ChildrenList>
+						<Event Name="Music_Gameplay" ID="{39211ADD-F315-443E-B860-D8CD1BD0F0A9}">
+							<ChildrenList>
+								<Action Name="" ID="{71E47539-5EB2-4895-A905-14536B29B37D}" ShortID="392151937">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Eclipse (Loopable)" ID="{90137C6F-0339-411E-81D7-76E688A3A832}" WorkUnitID="{BE046F09-47A5-4FAD-AED6-DC67600F7D19}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
