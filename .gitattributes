@@ -22,3 +22,5 @@
 *.exe filter=lfs diff=lfs merge=lfs -text
 *.dylib filter=lfs diff=lfs merge=lfs -text
 *.chm filter=lfs diff=lfs merge=lfs -text
+
+AkSoundEngine filter=lfs diff=lfs merge=lfs -text

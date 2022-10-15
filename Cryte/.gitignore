@@ -60,19 +60,9 @@ crashlytics-build.properties
 
 
 
-#########
-# WWISE #
-#########
-
-# Allow Wwise plugin
-# Commit everything in the Wwise plugin to git repo, even if it's otherwise ignored by the .gitignore (such as .lib and .dll)
-!Plugins/Wwise/
-!Plugins/Wwise/**/
-!Plugins/Wwise/**/*
-!Plugins/Wwise/**/*.dll
-!Plugins/Wwise/**/*.lib
-!Plugins/Wwise/*.dll
-!Plugins/Wwise/*.lib
+#################
+# WWISE + UNITY #
+#################
 
 # Ignore some extra generated Wwise files, especially ones that can be rebuilt from the project
 # source: https://www.audiokinetic.com/qa/1547/there-definitive-filesIntermediate-should-could-omitted-source-control
@@ -100,9 +90,10 @@ crashlytics-build.properties
 #
 # (NOTE: We'll check them into source control, if these are like Fmod banks it will be convenient)
 
-Plugins/Wwise/Binaries/Win64
-Plugins/Wwise/Intermediate/Build/Win64/
-Plugins/Wwise/Intermediate/Build/Win64/**
-
 # Don't commit Wwise profiling sessions they're large and only needed on your local computer
 *_WwiseProject/*.prof
+
+# Definitely need to check in the Wwise plugin dll files so make an exception for them
+# in case something else in the .gitignore is preventing them from being tracked
+!Assets/Wwise/API/Runtime/Plugins/**/*.dll
+!Assets/Wwise/API/Runtime/Plugins/**/*.pdb
