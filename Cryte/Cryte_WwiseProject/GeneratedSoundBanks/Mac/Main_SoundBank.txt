@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	620878633	Music_Gameplay			\Default Work Unit\Music\Music_Gameplay	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	258478638	Eclipse (Loopable)	D:\Unity\Games\mu-game-jam-2022\Cryte\Cryte_WwiseProject\.cache\Mac\SFX\Eclipse (Loopable)_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Eclipse (Loopable)		29352920
+

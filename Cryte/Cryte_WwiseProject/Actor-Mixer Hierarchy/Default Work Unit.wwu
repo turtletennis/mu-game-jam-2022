@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BE046F09-47A5-4FAD-AED6-DC67600F7D19}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{BE046F09-47A5-4FAD-AED6-DC67600F7D19}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Music" ID="{C988EDF3-CAF8-4C41-AC3A-D72403FF8C38}" ShortID="659668358">
+					<ChildrenList>
+						<Sound Name="Eclipse (Loopable)" ID="{90137C6F-0339-411E-81D7-76E688A3A832}" ShortID="1059154185">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{15026B90-8518-4883-89C6-FBFA504D390F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{753F6607-B136-40F1-BE73-703FF9BEEA4C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Eclipse (Loopable)" ID="{FD81C6D5-3DE1-4769-BE6B-805732E6444C}">
+									<Language>SFX</Language>
+									<AudioFile>Eclipse (Loopable).wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="258478638"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Eclipse (Loopable)" ID="{FD81C6D5-3DE1-4769-BE6B-805732E6444C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
