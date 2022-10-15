@@ -58,3 +58,44 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+
+
+#################
+# WWISE + UNITY #
+#################
+
+# Ignore some extra generated Wwise files, especially ones that can be rebuilt from the project
+# source: https://www.audiokinetic.com/qa/1547/there-definitive-filesIntermediate-should-could-omitted-source-control
+
+# as mentioned in link above
+*_WwiseProject/.cache/* 
+*_WwiseProject/.cache/**/*
+*_WwiseProject/.cache
+*_WwiseProject/**/.cache
+
+# as mentioned in link above
+*_WwiseProject/**/*.akd 
+
+# Usually prefixed with <Project>.<Username>.validationcache
+*_WwiseProject/*.validationcache
+
+# Don't track Wwise user settings
+*_WwiseProject/*.wsettings
+
+# For the GeneratedSoundBanks folder,
+# some people don't place it under source control, some people do.  
+# It depends on the your build pipeline.  
+# In theory, these files can always be rebuilt from the project, 
+# but some teams like to freeze them, and check-in them to source control. 
+#
+# (NOTE: We'll check them into source control, if these are like Fmod banks it will be convenient)
+
+# Don't commit Wwise profiling sessions they're large and only needed on your local computer
+*_WwiseProject/*.prof
+
+# Definitely need to check in the Wwise plugin dll files so make an exception for them
+# in case something else in the .gitignore is preventing them from being tracked
+!Assets/Wwise/API/Runtime/Plugins/**/*.dll
+!Assets/Wwise/API/Runtime/Plugins/**/*.pdb
+!Assets/Wwise/**/*
+Assets/Wwise/**/*.meta
