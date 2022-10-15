@@ -7,16 +7,19 @@ public class PlayerController : MonoBehaviour
     Vector2 moveDirection;
     [SerializeField] float moveSpeed = 2;
     [SerializeField] float rotateSpeed = 45;
+    [SerializeField] float runSpeed = 4;
     // Start is called before the first frame update
+    bool isRunning;
     void Start()
     {
-        Debug.Log(transform.forward);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 moveAmount = new Vector3(0,0,moveDirection.y) * Time.deltaTime * moveSpeed;
+        float speed = isRunning ? runSpeed : moveSpeed;
+        Vector3 moveAmount = new Vector3(0,0,moveDirection.y) * Time.deltaTime * speed;
         float turnAmount = moveDirection.x * Time.deltaTime * rotateSpeed;
         transform.RotateAround(transform.position,transform.up,turnAmount);
         transform.Translate(moveAmount);
@@ -24,8 +27,15 @@ public class PlayerController : MonoBehaviour
 
     void OnMove(InputValue input)
     {
-        Debug.Log(transform.forward * moveDirection.y * moveSpeed);
+        
         moveDirection = input.Get<Vector2>();
-        Debug.Log(moveDirection);
+        
     }
+
+    void OnRun(InputValue input)
+    {
+        
+        isRunning = input.Get<float>()==1;
+    }
+
 }
