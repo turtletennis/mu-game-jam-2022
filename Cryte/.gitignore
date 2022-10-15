@@ -97,3 +97,5 @@ crashlytics-build.properties
 # in case something else in the .gitignore is preventing them from being tracked
 !Assets/Wwise/API/Runtime/Plugins/**/*.dll
 !Assets/Wwise/API/Runtime/Plugins/**/*.pdb
+!Assets/Wwise/**/*
+Assets/Wwise/**/*.meta
