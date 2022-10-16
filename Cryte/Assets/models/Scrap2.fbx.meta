@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 35598a814d9a8a6459b069c039fbbbfa
+guid: b885fd4d23b1f9743af5c6d0b09abe11
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,7 +7,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Clouds
+      name: Material.001
     second: {fileID: 2100000, guid: 36e07e072a1ef904a83779df35007c1b, type: 2}
   materials:
     materialImportMode: 2
@@ -40,7 +40,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -93,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
