@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Cryte/Assets/models/cactus.fbm.meta
+guid: e790d018e9ea1bf4c874fce038ac169c
+========
 guid: 9d87c265f8d81324f9114cf8b4166f43
+>>>>>>>> 5c55539d8aecc3ee389f11528a4f54bfe0c5e975:Cryte/Assets/Materials/Andy Materials.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
