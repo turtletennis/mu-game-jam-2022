@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
         float speed = isRunning ? runSpeed : moveSpeed;
         Vector3 moveAmount = new Vector3(0,0,moveDirection.y) * Time.deltaTime * speed;
         float turnAmount = moveDirection.x * Time.deltaTime * rotateSpeed;
+        if(isRunning) turnAmount *= 2;
         transform.RotateAround(transform.position,transform.up,turnAmount);
         transform.Translate(moveAmount);
     }
