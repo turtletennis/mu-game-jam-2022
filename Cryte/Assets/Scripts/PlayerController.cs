@@ -8,11 +8,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float moveSpeed = 2;
     [SerializeField] float rotateSpeed = 45;
     [SerializeField] float runSpeed = 4;
+    Rigidbody rigidbody;
     // Start is called before the first frame update
     bool isRunning;
     void Start()
     {
-        
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -23,7 +24,13 @@ public class PlayerController : MonoBehaviour
         float turnAmount = moveDirection.x * Time.deltaTime * rotateSpeed;
         if(isRunning) turnAmount *= 2;
         transform.RotateAround(transform.position,transform.up,turnAmount);
-        transform.Translate(moveAmount);
+        
+        //rigidbody.MoveRotation(Quaternion.Euler(0,turnAmount,0));
+        Vector3 newVelocity = new Vector3(rigidbody.velocity.x,rigidbody.velocity.y,speed*moveDirection.y);
+        newVelocity = rigidbody.transform.forward * speed * moveDirection.y;
+        newVelocity.y = rigidbody.velocity.y;
+        //newVelocity = rigidbody.velocity;
+        rigidbody.velocity=newVelocity;
     }
 
     void OnMove(InputValue input)
