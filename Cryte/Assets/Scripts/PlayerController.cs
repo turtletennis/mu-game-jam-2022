@@ -21,16 +21,18 @@ public class PlayerController : MonoBehaviour
     {
         float speed = isRunning ? runSpeed : moveSpeed;
         Vector3 moveAmount = new Vector3(0,0,moveDirection.y) * Time.deltaTime * speed;
-        float turnAmount = moveDirection.x * Time.deltaTime * rotateSpeed;
+        float turnAmount = moveDirection.x *  rotateSpeed;
         if(isRunning) turnAmount *= 2;
-        transform.RotateAround(transform.position,transform.up,turnAmount);
-        
-        //rigidbody.MoveRotation(Quaternion.Euler(0,turnAmount,0));
+        rigidbody.MoveRotation(rigidbody.rotation * Quaternion.AngleAxis(turnAmount*0.005f,rigidbody.transform.up));
         Vector3 newVelocity = new Vector3(rigidbody.velocity.x,rigidbody.velocity.y,speed*moveDirection.y);
         newVelocity = rigidbody.transform.forward * speed * moveDirection.y;
         newVelocity.y = rigidbody.velocity.y;
         //newVelocity = rigidbody.velocity;
         rigidbody.velocity=newVelocity;
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        
     }
 
     void OnMove(InputValue input)
