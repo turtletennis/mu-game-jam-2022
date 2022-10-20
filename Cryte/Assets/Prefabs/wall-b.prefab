@@ -173,7 +173,6 @@ GameObject:
   - component: {fileID: 2962468555246801534}
   - component: {fileID: 2962468555246801529}
   - component: {fileID: 2962468555246801528}
-  - component: {fileID: 5352864495096285692}
   m_Layer: 0
   m_Name: wall-b
   m_TagString: Untagged
@@ -262,19 +261,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!65 &5352864495096285692
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2728517979665385229}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.4187929, y: 0.4932971, z: 0.4688927}
-  m_Center: {x: 0, y: 0.24579537, z: -0.009851992}
 --- !u!1 &2962468555660773831
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,7 +460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8430974832590663217}
   - component: {fileID: 4138322879895711692}
-  - component: {fileID: 6006918182525825193}
+  - component: {fileID: 6156512225062279451}
   m_Layer: 0
   m_Name: wall-b
   m_TagString: Untagged
@@ -557,8 +543,8 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0.00037887308, z: 0.0024429827}
     m_Extent: {x: 0.002093964, y: 0.001808612, z: 0.0024429837}
   m_DirtyAABB: 0
---- !u!65 &6006918182525825193
-BoxCollider:
+--- !u!136 &6156512225062279451
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -567,9 +553,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0041879285, y: 0.0046779737, z: 0.004885967}
-  m_Center: {x: 0, y: 0.00015150018, z: 0.0024429825}
+  m_Radius: 0.0024429837
+  m_Height: 0.0036172247
+  m_Direction: 1
+  m_Center: {x: -0.00000011925584, y: -0.00037875384, z: 0.0024429823}
 --- !u!1 &4091468076461574547
 GameObject:
   m_ObjectHideFlags: 0
